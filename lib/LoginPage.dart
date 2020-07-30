@@ -45,7 +45,7 @@ class LoginPage extends StatelessWidget {
                 textColor: Colors.white,
                 padding: EdgeInsets.all(16),
                 onPressed: () {
-                  registerUser(_phoneController.text, context);
+                  requestSMSCode(_phoneController.text, context);
                 },
                 color: Colors.blue,
               ),
@@ -95,7 +95,7 @@ class LoginPage extends StatelessWidget {
     }
   }
 
-  Future registerUser(String mobile, BuildContext context) async {
+  Future requestSMSCode(String mobile, BuildContext context) async {
     print("Starting...");
 
     FirebaseAuth _auth = FirebaseAuth.instance;
